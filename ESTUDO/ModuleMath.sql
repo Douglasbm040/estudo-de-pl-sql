@@ -8,6 +8,12 @@ as
         NUMERO NUMBER,
         VALOR NUMBER 
     );
+   function constructormath(
+      NUMERO in NUMBER,
+      VALOR IN NUMBER
+   ) return OBJECT;
+
+   
 end math;   
 
 CREATE OR REPLACE PACKAGE BODY math aS
