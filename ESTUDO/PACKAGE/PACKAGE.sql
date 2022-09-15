@@ -1,4 +1,4 @@
---package
+--! PACKAGE 
 --* CRIANDO UM VETOR 
 CREATE OR REPLACE TYPE arraynumerico AS VARRAY(3) OF number;
 
