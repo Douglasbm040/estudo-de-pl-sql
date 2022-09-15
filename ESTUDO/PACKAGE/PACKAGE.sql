@@ -1,0 +1,71 @@
+--package
+--* CRIANDO UM VETOR 
+CREATE OR REPLACE TYPE arraynumerico AS VARRAY(3) OF number;
+
+--*criando um package
+CREATE OR REPLACE PACKAGE matematica IS
+  PROCEDURE MEDIUS(
+    VETORNUMERICO IN arraynumerico
+  );
+
+  FUNCTION MAXIMUS(
+    VETORNUMERICO IN arraynumerico
+  )RETURN NUMBER;
+
+  FUNCTION MINIMUS(
+     VETORNUMERICO IN arraynumerico
+   )RETURN NUMBER ;
+
+END matematica;
+/
+
+--*criando o corpo do packege 
+CREATE OR REPLACE PACKAGE BODY matematica AS
+  PROCEDURE MEDIUS (
+    VETORNUMERICO IN arraynumerico)
+    IS
+     VALOR NUMBER ;
+     SOMA NUMBER := 0;
+    BEGIN
+      --* PERCORRENDO O VETOR 
+      FOR VALOR IN 1..VETORNUMERICO.COUNT LOOP
+        SOMA := VALOR + SOMA ;
+      END LOOP;
+        DBMS_OUTPUT.PUT_LINE('A MEDIA E : '||SOMA/VETORNUMERICO.COUNT);
+    END ;
+
+  FUNCTION MAXIMUS (
+    VETORNUMERICO IN arraynumerico) RETURN NUMBER
+    IS
+    MAIOR NUMBER := 0 ;
+    VALOR NUMBER;
+    BEGIN
+        FOR VALOR IN 1..VETORNUMERICO.COUNT LOOP
+            IF VALOR > MAIOR THEN
+                MAIOR := VALOR ;
+            END IF ;
+        END LOOP ;
+        RETURN MAIOR;
+    END;
+
+   FUNCTION MINIMUS(
+     VETORNUMERICO IN arraynumerico
+   )RETURN NUMBER IS
+     VALOR NUMBER;
+     MINUMO NUMBER := MAXIMUS(VETORNUMERICO);--* USANDO A FUNCAO MAXIMO PARA OBTER O VALOR MAXIMO DO VETOR
+     BEGIN 
+         FOR VALOR IN 1..VETORNUMERICO.COUNT LOOP
+             IF VALOR <  MINUMO THEN
+                MINUMO := VALOR ;
+             END IF ;
+         END LOOP;  
+         RETURN MINUMO ; 
+     END;
+    
+END matematica;
+/
+
+--* USO
+EXECUTE MATEMATICA.MEDIUS(arraynumerico(1,2,3));
+SELECT MATEMATICA.MAXIMUS(arraynumerico(1,2,3)) FROM DUAL;
+SELECT MATEMATICA.MINIMUS(arraynumerico(1,2,3)) FROM DUAL;
