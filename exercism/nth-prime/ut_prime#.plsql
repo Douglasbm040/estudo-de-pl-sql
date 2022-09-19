@@ -1,3 +1,27 @@
+--* crivo de eratostenes
+CREATE OR REPLACE FUNCTION FUNCTION1 (
+  NUMERO IN NUMBER
+  )RETURN NUMBER
+  IS
+    LIMITEPRIMO number := ROUND(SQRT(NUMERO),0);--* ARRENDONDAMENTO 
+    --EXECUTE IMMEDIATE 'CREATE OR REPLACE TYPE LISTNUMBER AS VARRAY(10) OF NUMBER;';
+    --ARRAYNUMBER LISTNUMBER ;
+  BEGIN
+  --* PREENCHENDO O VETOR
+    -- FOR I IN 2..NUMERO LOOP
+    --   IF I/2 == 0 && I <> 2 THEN
+    --   ELSE IF I == NUMERO THEN
+    --     ARRAYNUMBER(I) := I ;
+    --   ELSE THEN 
+    --     ARRAYNUMBER(I-1) := I ;
+    --   END IF;
+    -- END LOOP;
+    RETURN LIMITEPRIMO;  
+END FUNCTION1;
+/
+
+
+
 create or replace package ut_prime#
 is
   procedure run;

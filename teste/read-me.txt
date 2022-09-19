@@ -1,0 +1,138 @@
+
+ Tarefa- Tabela de Clientes
+
+Usando os conhecimentos adquiridos na formação de SQL e PL/SQL agora iremos praticar o que aprendemos.
+
+1ª etapa - Iremos criar uma tabela no banco de dados com o nome CLIENTES e os seguintes campos: ID, NOME E  IDADE. O campo ID deverá ser definido como Chave Primária nesta tabela.
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+
+
+
+2ª etapa – Após a criação da tabela utilize o devido comando SQL para inserir os seguintes dados na  tabela CLIENTES.
+
+CLIENTES
+ID
+NOME
+IDADE
+1
+JULIANA SILVA
+16
+2
+PAULO COSTA
+45
+3
+FERNANDA PIRES
+18
+4
+FÁBIO ALVES
+25
+5
+ANTÔNIO CARLOS
+17
+
+
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+
+
+3ª etapa – Após a criação da tabela e inserção dos dados agora iremos utilizar nosso conhecimento em  PL/SQL para criação de procedures.
+
+Crie uma procedure  com o  seguinte nome PROC_PEGARNOMECLIENTES, esta procedure  recebe um código do cliente (ID) como parâmetro de entrada e através de um parâmetro de saída retorna o nome do cliente. Caso, o código seja inexistente, retorna: Cliente não encontrado.
+Resposta, script ou print da tela:  
+
+
+
+
+
+Realize os seguintes Casos de Teste:
+1º caso de teste- Teste o valor 2 como parâmetro de entrada e informe o retorno apresentado:
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+2º caso de teste- Teste o valor 8 como parâmetro de entrada e informe o retorno apresentado:
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+3º caso de teste- Teste o valor NULL como parâmetro de entrada e informe o retorno apresentado:
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+Agora crie uma segunda procedure com o seguinte nome PROC_RETORNAMAIORIDADE, esta procedure  recebe um código do cliente (ID) como parâmetro de entrada e através de um parâmetro de saída retorna o nome do cliente e se este Cliente é Maior de idade (caso idade>=18) ou Menor de Idade. Caso, o código seja inexistente, retorna: Cliente não encontrado.
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+
+
+
+1º caso de teste- Teste o valor 1 como parâmetro de entrada e informe o retorno apresentado:
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+
+
+
+
+
+2º caso de teste- Teste o valor 2 como parâmetro de entrada e informe o retorno apresentado:
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+
+
+
+3º caso de teste- Teste o valor 3 como parâmetro de entrada e informe o retorno apresentado:
+Resposta, script ou print da tela:  
+
+
+
+
+
+
+
+
+
+4º caso de teste- Teste o valor NULL como parâmetro de entrada e informe o retorno apresentado:
+Resposta, script ou print da tela:  
+
