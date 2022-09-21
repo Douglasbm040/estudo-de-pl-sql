@@ -79,7 +79,7 @@ BEGIN
     EXCEPTION 
         WHEN no_data_found
         THEN 
-        REPOSTA := '0';
+        REPOSTA := 'cliente nao encontrado';
         DBMS_OUTPUT.PUT_LINE('======>'||REPOSTA);
 END PROC_PEGARNOMECLIENTES;
 /
