@@ -1,0 +1,5 @@
+vantagens de usar python com pl/sql
+[] linguagem multiparadigma de proposito geral
+[] abertura para aplicacao de bibliotecas do python
+com as bibliotecas de machine learning e ciencias de dados
+[] uso de comunicacao http entre outras propriedades;
